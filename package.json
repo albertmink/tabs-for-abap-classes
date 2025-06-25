@@ -1,13 +1,27 @@
 {
   "name": "tabs-for-abap-classes",
   "displayName": "Tabs-for-abap-classes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albertmink/tabs-for-abap-classes"
+  },
   "description": "",
   "version": "0.0.1",
+  "license": "MIT",
+  "publisher": "albertmink",
+  "keywords": [
+    "abap",
+    "abap-file-formats"
+  ],
   "engines": {
     "vscode": "^1.101.0"
   },
   "categories": [
     "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "*"
   ],
   "contributes": {
     "commands": [],
@@ -18,11 +32,11 @@
           "workbench.editor.customLabels.patterns": {
             "type": "object",
             "default": {
-              "**/Classes/**/*.clas.abap": "${dirname} - Global Class",
-              "**/Classes/**/*.clas.implementations.abap": "${dirname} - Locale Types",
-              "**/Classes/**/*.clas.definitions.abap": "${dirname} - Class-relevant Locale Types",
-              "**/Classes/**/*.clas.testclasses.abap": "${dirname} - Test Classes",
-              "**/Classes/**/*.clas.macros.abap": "${dirname} - Macros"
+              "**/*.clas.abap": "${dirname} - Global Class",
+              "**/*.clas.implementations.abap": "${dirname} - Locale Types",
+              "**/*.clas.definitions.abap": "${dirname} - Class-relevant Locale Types",
+              "**/*.clas.testclasses.abap": "${dirname} - Test Classes",
+              "**/*.clas.macros.abap": "${dirname} - Macros"
             },
             "description": "Custom editor label patterns"
           }
