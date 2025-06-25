@@ -1,0 +1,33 @@
+{
+  "name": "tabs-for-abap-classes",
+  "displayName": "Tabs-for-abap-classes",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [],
+    "configuration": [
+      {
+        "title": "Custom Label Configuration",
+        "properties": {
+          "workbench.editor.customLabels.patterns": {
+            "type": "object",
+            "default": {
+              "**/Classes/**/*.clas.abap": "${dirname} - Global Class",
+              "**/Classes/**/*.clas.implementations.abap": "${dirname} - Locale Types",
+              "**/Classes/**/*.clas.definitions.abap": "${dirname} - Class-relevant Locale Types",
+              "**/Classes/**/*.clas.testclasses.abap": "${dirname} - Test Classes",
+              "**/Classes/**/*.clas.macros.abap": "${dirname} - Macros"
+            },
+            "description": "Custom editor label patterns"
+          }
+        }
+      }
+    ]
+  }
+}
