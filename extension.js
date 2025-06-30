@@ -13,7 +13,10 @@ function activate(context) {
   config.update('patterns', patterns, vscode.ConfigurationTarget.Global);
 }
 
-function deactivate() {}
+function deactivate() {
+  const config = vscode.workspace.getConfiguration('workbench.editor.customLabels');
+  config.update('patterns', undefined, vscode.ConfigurationTarget.Global);
+}
 
 module.exports = {
   activate,
